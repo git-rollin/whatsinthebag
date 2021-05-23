@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911cf0f4a56d7534097c13f7c75557d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 2724462134155561626, guid: d33ae29e2c9d74447b7388509f4072e4, type: 3}
 --- !u!54 &6558163277067888789
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,5 +124,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
