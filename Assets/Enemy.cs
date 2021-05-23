@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    public GameObject bloodPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Instantiate(bloodPrefab, collision.contacts[0].point, collision.rigidbody.rotation);
     }
 }

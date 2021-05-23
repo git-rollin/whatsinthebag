@@ -12,14 +12,12 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.right * speed * -1;
     }
 
-    void OnTriggerEnter (Collider hitInfo)
+    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(hitInfo.name);
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (enemy != null)
+        Debug.Log(collision.collider.name);
+        if (collision.collider.name == "Enemy")
         {
             Destroy(gameObject);
         }
-        // Destroy(gameObject);
     }
 }
