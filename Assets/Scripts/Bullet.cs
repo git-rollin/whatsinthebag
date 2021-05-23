@@ -11,9 +11,15 @@ public class Bullet : MonoBehaviour
     {
         rb.velocity = transform.right * speed * -1;
     }
+
     void OnTriggerEnter (Collider hitInfo)
     {
         Debug.Log(hitInfo.name);
-        Destroy(gameObject);
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            Destroy(gameObject);
+        }
+        //Destroy(gameObject);
     }
 }
